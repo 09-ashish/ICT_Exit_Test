@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Pokemon Type</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="page">
+    <div class="container">
+        <div class="form-shell">
+            <h1>Enter Pokemon Statistics</h1>
+
+            <form class="pokemon-form" action="/result" method="post">
+                <div class="field-grid">
+                    <div class="field">
+                        <label for="height">Height (dm)</label>
+                        <input type="number" step="any" id="height" name="height" placeholder="e.g. 15" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="weight">Weight (hg)</label>
+                        <input type="number" step="any" id="weight" name="weight" placeholder="e.g. 40" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="exp">Base Experience</label>
+                        <input type="number" step="any" id="exp" name="exp" placeholder="e.g. 64" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="hp">HP</label>
+                        <input type="number" step="any" id="hp" name="hp" placeholder="e.g. 45" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="attack">Attack</label>
+                        <input type="number" step="any" id="attack" name="attack" placeholder="e.g. 49" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="defense">Defense</label>
+                        <input type="number" step="any" id="defense" name="defense" placeholder="e.g. 49" required>
+                    </div>
+                </div>
+
+                <button class="primary-btn" type="submit">Predict Type</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

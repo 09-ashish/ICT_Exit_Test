@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="page">
+    <div class="container">
+        <div class="result-card">
+            <span class="eyebrow">Analysis Complete</span>
+            <h1>Prediction Result</h1>
+            <p>Predicted Pokémon Type:</p>
+            <div class="prediction">{{ prediction }}</div>
+
+            <div class="result-actions">
+                <a class="primary-btn" href="/predict">Predict Another Pokemon</a>
+                <a class="secondary-btn" href="/">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
